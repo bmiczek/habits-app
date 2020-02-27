@@ -35,7 +35,7 @@ export default function Register() {
     }
 
     try {
-      const response = await axios.post('/api/register', registerData);
+      const response = await axios.post('/api/register/', registerData);
 
       setToken(response.data.access, response.data.refresh);
 

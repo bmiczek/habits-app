@@ -1,0 +1,250 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "habits",
+      "model": "habit"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "habits",
+      "model": "entry"
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 2,
+    "fields": {
+      "title": "Workout for 1 hr",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 3,
+    "fields": {
+      "title": "Program for 1 hr",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 4,
+    "fields": {
+      "title": "Read 20 pages",
+      "occurrence": 2
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 6,
+    "fields": {
+      "title": "Drink a glass of water",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 7,
+    "fields": {
+      "title": "do something great",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 8,
+    "fields": {
+      "title": "do something great",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 9,
+    "fields": {
+      "title": "do something great",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 10,
+    "fields": {
+      "title": "another one",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 11,
+    "fields": {
+      "title": "another one again",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 12,
+    "fields": {
+      "title": "too",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 13,
+    "fields": {
+      "title": "do something great",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 14,
+    "fields": {
+      "title": "do something great",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 15,
+    "fields": {
+      "title": "2",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 16,
+    "fields": {
+      "title": "do something great",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.habit",
+    "pk": 17,
+    "fields": {
+      "title": "do something great",
+      "occurrence": 1
+    }
+  },
+  {
+    "model": "habits.entry",
+    "pk": 1,
+    "fields": {
+      "date": "2020-01-13",
+      "habit": 2
+    }
+  },
+  {
+    "model": "habits.entry",
+    "pk": 2,
+    "fields": {
+      "date": "2020-01-12",
+      "habit": 2
+    }
+  },
+  {
+    "model": "habits.entry",
+    "pk": 3,
+    "fields": {
+      "date": "2020-01-09",
+      "habit": 2
+    }
+  },
+  {
+    "model": "habits.entry",
+    "pk": 4,
+    "fields": {
+      "date": "2020-01-10",
+      "habit": 2
+    }
+  },
+  {
+    "model": "habits.entry",
+    "pk": 5,
+    "fields": {
+      "date": "2020-01-10",
+      "habit": 3
+    }
+  },
+  {
+    "model": "habits.entry",
+    "pk": 6,
+    "fields": {
+      "date": "2020-01-16",
+      "habit": 2
+    }
+  },
+  {
+    "model": "habits.entry",
+    "pk": 7,
+    "fields": {
+      "date": "2019-12-04",
+      "habit": 3
+    }
+  },
+  {
+    "model": "habits.entry",
+    "pk": 8,
+    "fields": {
+      "date": "2020-01-25",
+      "habit": 2
+    }
+  }
+]

@@ -10,7 +10,7 @@ export default function Home() {
     let response;
 
     try {
-      response = await axios.get('/api/habits');
+      response = await axios.get('/api/habits/');
     } catch (e) {
       console.log(e);
     }
