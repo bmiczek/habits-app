@@ -4,77 +4,78 @@ The goal of this app is to practice creating an application using Django
 and React.
 
 ## Prerequisites
-
-- Git
-- Python 3 (or use pyenv/virtualenv)
-- Node and npm
-
-## Getting Started
-
-Clone the repository
-
-```
+1. Install pyenv
+2. Install virtualenv
+3. Install npm/nodejs
+3. Download Python 3.8.0
+    ```shell script
+    pyenv install 3.8.0
+    ```
+   
+## Installation
+   
+Clone the repo
+```shell script
 git clone git@github.com:bmiczek/habits-app.git
-```
-
-### Backend Setup
-
-Start inside the repository
-
-```
 cd habits-app
 ```
 
-Create a python virtual environment
-
-```
-pyenv virtualenv habits-app
+### Backend
+Create python virtual environment
+```shell script
+pyenv virtualenv 3.8.0 habits-app
 pyenv local habits-app
 ```
 
-Install the dependencies
-
-```
+Install python dependencies
+```shell script
 pip install -r requirements.txt
 ```
 
-Create the database
-
-```
+Run database migrations
+```shell script
 ./manage.py migrate
 ```
 
 Create a superuser
-
 ```
 ./manage.py createsuperuser
 ```
 
-Start the server
-
-```
-./manage.py runserver
-```
-
-Explore the api by going to http://localhost:8000/api/habits
-
-### Frontend Setup
-
-Start inside the frontend directory
-
-```
+### Frontend
+Create frontend environment file
+```shell script
 cd frontend
+cp .env.sample .env
 ```
 
-Install the dependencies
-```
+Install frontend dependencies
+```shell script
+cd frontend/
 npm install
 ```
 
-Start the application
+## Running the App
 
+Start the django server (in the root of the project)
+```shell script
+./manage.py runserver
 ```
+
+Start the npm server
+```shell script
+cd frontend/
 npm start
 ```
 
-View the application in the browser: http://localhost:3000/
+Visit http://localhost:8000
+
+## Running the App in production
+Section in progress, mock using the following:
+
+```shell script
+cd frontend/
+npm run build
+cd ..
+./manage.py runserver --settings=backend.settings_production
+```
