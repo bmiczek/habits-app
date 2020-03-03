@@ -14,6 +14,7 @@ function App() {
       <GlobalStyle />
       <PageStyle>
         <Router>
+          <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/home" component={Home} />
           <Route path="/register" component={Register} />
