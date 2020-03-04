@@ -138,7 +138,7 @@ WEBPACK_LOADER = {
     }
 }
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 # Configure app for Heroku deployment
 django_heroku.settings(locals())
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
