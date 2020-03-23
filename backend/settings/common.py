@@ -30,6 +30,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "webpack_loader",
+    "rest_framework",
+    "backend.habits",
+    "backend.users",
 ]
 
 MIDDLEWARE = [
@@ -93,6 +96,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Authentication
+# https://www.django-rest-framework.org/api-guide/authentication/#how-authentication-is-determined
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ]
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
