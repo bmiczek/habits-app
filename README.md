@@ -45,13 +45,11 @@ Create a superuser
 ### Frontend
 Create frontend environment file
 ```shell script
-cd frontend
 cp .env.sample .env
 ```
 
 Install frontend dependencies
 ```shell script
-cd frontend/
 npm install
 ```
 
@@ -64,18 +62,46 @@ Start the django server (in the root of the project)
 
 Start the npm server
 ```shell script
-cd frontend/
 npm start
 ```
 
 Visit http://localhost:8000
 
-## Running the App in production
-Section in progress, mock using the following:
-
+## Run like production
 ```shell script
-cd frontend/
+# build frontend
 npm run build
-cd ..
-./manage.py runserver --settings=backend.settings_production
+
+# Set environment variables
+export SECRET_KEY={guid}
+export DJANGO_SETTINGS_MODULE=backend.settings_production
+
+# copy frontend files to `staticfiles/.`
+./manage.py collectstatic --settings=backend.settings.production --noinput 
+
+# migrate the db
+python manage.py migrate
+
+# Start the server
+gunicorn backend.wsgi --log-file -
+```
+
+## Deploy to Heroku
+```.shell script
+heroku create
+
+heroku buildpacks:add --index 1 heroku/nodejs
+heroku buildpacks:add --index 2 heroku/python
+
+heroku addons:create heroku-postgresql:hobby-dev
+
+heroku config:set SECRET_KEY={guid}
+heroku config:set DJANGO_SETTINGS_MODULE=backend.settings_production
+
+# Make a Procfile:
+release: python manage.py migrate
+web: gunicorn backend.wsgi --log-file -
+
+heroku local
+git push heroku master
 ```
