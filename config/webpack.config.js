@@ -177,7 +177,7 @@ module.exports = function(webpackEnv) {
       // It requires a trailing slash, or the file assets will get an incorrect path.
       // We inferred the "public path" (such as / or /my-project) from homepage.
       publicPath: isEnvProduction
-        ? '/static/bundles/'
+        ? paths.publicUrlOrPath
         : isEnvDevelopment && 'http://localhost:3000/',
       // Point sourcemap entries to original disk location (format as URL on Windows)
       devtoolModuleFilenameTemplate: isEnvProduction

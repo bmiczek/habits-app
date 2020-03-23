@@ -74,7 +74,7 @@ npm run build
 
 # Set environment variables
 export SECRET_KEY={guid}
-export DJANGO_SETTINGS_MODULE=backend.settings_production
+export DJANGO_SETTINGS_MODULE=backend.settings.production
 
 # copy frontend files to `staticfiles/.`
 ./manage.py collectstatic --settings=backend.settings.production --noinput 
@@ -96,7 +96,7 @@ heroku buildpacks:add --index 2 heroku/python
 heroku addons:create heroku-postgresql:hobby-dev
 
 heroku config:set SECRET_KEY={guid}
-heroku config:set DJANGO_SETTINGS_MODULE=backend.settings_production
+heroku config:set DJANGO_SETTINGS_MODULE=backend.settings.production
 
 # Make a Procfile:
 release: python manage.py migrate
