@@ -53,7 +53,7 @@ Install frontend dependencies
 npm install
 ```
 
-## Running the App
+## Running the App in development
 
 Start the django server (in the root of the project)
 ```shell script
@@ -84,6 +84,9 @@ python manage.py migrate
 
 # Start the server
 gunicorn backend.wsgi --log-file -
+
+# Start heroku locally after you set it up
+heroku local
 ```
 
 ## Deploy to Heroku
@@ -102,6 +105,5 @@ heroku config:set DJANGO_SETTINGS_MODULE=backend.settings.production
 release: python manage.py migrate
 web: gunicorn backend.wsgi --log-file -
 
-heroku local
 git push heroku master
 ```
