@@ -6,7 +6,7 @@ and React.
 ## Prerequisites
 1. Install pyenv
 2. Install virtualenv
-3. Install npm/nodejs
+3. Install yarn/nodejs
 3. Download Python 3.8.0
     ```shell script
     pyenv install 3.8.0
@@ -50,7 +50,7 @@ cp .env.sample .env
 
 Install frontend dependencies
 ```shell script
-npm install
+yarn install
 ```
 
 ## Running the App in development
@@ -60,9 +60,9 @@ Start the django server (in the root of the project)
 ./manage.py runserver
 ```
 
-Start the npm server
+Start the nodejs server
 ```shell script
-npm start
+yarn start
 ```
 
 Visit http://localhost:8000
@@ -70,7 +70,7 @@ Visit http://localhost:8000
 ## Run like production
 ```shell script
 # build frontend
-npm run build
+yarn build
 
 # Set environment variables
 export SECRET_KEY={guid}
@@ -92,6 +92,7 @@ heroku local
 ## Deploy to Heroku
 ```.shell script
 heroku create
+# Update the URL in ALLOWED_HOSTS in backend/settings/production.py
 
 heroku buildpacks:add --index 1 heroku/nodejs
 heroku buildpacks:add --index 2 heroku/python
@@ -107,3 +108,17 @@ web: gunicorn backend.wsgi --log-file -
 
 git push heroku master
 ```
+
+# Resources
+
+## Project setup
+
+## Custom User Model
+https://thinkster.io/tutorials/django-json-api/authentication
+
+## JWT
+https://simpleisbetterthancomplex.com/tutorial/2018/12/19/how-to-use-jwt-authentication-with-django-rest-framework.html
+
+## Heroku Deployment
+https://dev.to/shakib609/deploy-your-django-react-js-app-to-heroku-2bck
+https://medium.com/agatha-codes/9-straightforward-steps-for-deploying-your-django-app-with-heroku-82b952652fb4
