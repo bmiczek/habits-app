@@ -7,8 +7,10 @@ from rest_framework import generics
 
 class HabitList(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated,)
-    queryset = Habit.objects.all()
     serializer_class = HabitSerializer
+
+    def get_queryset(self):
+        return Habit.objects.all()
 
 
 class HabitDetail(generics.RetrieveUpdateDestroyAPIView):
