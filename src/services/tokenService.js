@@ -6,3 +6,10 @@ export function setToken(accessToken, refreshToken) {
 
   axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
 }
+
+export function removeToken() {
+  localStorage.removeItem('accessToken');
+  localStorage.removeItem('refreshToken');
+
+  axios.defaults.headers.common['Authorization'] = ``;
+}
